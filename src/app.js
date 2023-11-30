@@ -3,15 +3,14 @@ import cookieParser from "cookie-parser";
 import { __dirname } from "./utils.js";
 import handlebars from 'express-handlebars';
 import viewsRouter from "./routes/views.router.js";
-import productsRouter from "./routes/products.router.js";
-import cartsRouter from "./routes/carts.router.js"
-import cookieRouter from "./routes/cookie.router.js";
+import productsRouter from "./routes/product.router.js";
+import cartsRouter from "./routes/cart.router.js"
 import sessionsRouter from "./routes/session.router.js";
 import session from "express-session";
 import fileStore from "session-file-store";
 import MongoStore from "connect-mongo";
-import "./passport.js";
 import passport from "passport";
+import "./passport.js";
 import "./db/configDB.js"
 
 const FileStore = fileStore(session);
